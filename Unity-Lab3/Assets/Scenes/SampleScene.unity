@@ -331,11 +331,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1 &293174900
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,11 +482,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,11 +973,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1 &767347866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,11 +1124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1 &830421611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,11 +1356,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1 &1059410282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,11 +1571,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1 &1250332775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,11 +1722,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1 &1320405691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,11 +1873,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1 &1356218337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,11 +2088,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1 &1503162093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,11 +2335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1 &1715137400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,11 +2550,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1 &2061534833
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,11 +2701,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1 &2106210178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2876,11 +2852,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ee67fe8530b1f49859c83d99f0b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PianoKey
-  NoteName: 
+  NoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
   Animator: {fileID: 0}
   AudioSource: {fileID: 0}
-  IdleStateName: Idle
-  PressTriggerName: Pressed
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

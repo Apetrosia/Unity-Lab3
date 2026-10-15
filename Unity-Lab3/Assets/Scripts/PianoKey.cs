@@ -2,61 +2,68 @@ using UnityEngine;
 
 public class PianoKey : MonoBehaviour
 {
-    [Header("Настройки клавиши")]
-    [Tooltip("Имя ноты (должно совпадать с ключом в NoteSoundsSO)")]
-    public string NoteName;
+    [Header("Конфигурация")]
+    [Tooltip("ScriptableObject с данными о нотах")]
+    public NoteSoundsSO NoteSounds;
 
     [Header("Компоненты")]
     public Animator Animator;
     public AudioSource AudioSource;
 
-    [Header("Состояния аниматора")]
-    [Tooltip("Название состояния Idle в аниматоре")]
-    public string IdleStateName = "Idle";
+    private KeyCode _inputKey;
+    private AudioClip _clip;
+    private bool _canPress = true;
 
-    [Tooltip("Название триггера нажатия")]
-    public string PressTriggerName = "Pressed";
-
-    private bool _isPlaying;
-
-    public void Initialize(AudioClip clip)
+    private void Awake()
     {
-        if (clip != null)
+        Animator = GetComponent<Animator>();
+        AudioSource = GetComponent<AudioSource>();
+    }
+
+    void Start()
+    {
+        string noteName = gameObject.name;
+        _inputKey = NoteSounds.GetInputKey(noteName);
+        _clip = NoteSounds.GetSound(noteName);
+
+        if (_clip != null)
         {
-            AudioSource.clip = clip;
+            AudioSource.clip = _clip;
         }
-        else
+
+        Debug.Log($"Клавиша {noteName} инициализирована. Клавиша ввода: {_inputKey}");
+    }
+
+    void Update()
+    {
+        // Проверяем нажатие клавиши
+        if (Input.GetKeyDown(_inputKey))
         {
-            Debug.LogWarning($"Не найден звук для клавиши {NoteName}");
+            TryPress();
+        }
+
+        // АВТОМАТИЧЕСКИ разблокируем клавишу, когда она вернулась в Idle
+        if (!_canPress)
+        {
+            AnimatorStateInfo state = Animator.GetCurrentAnimatorStateInfo(0);
+            if (state.IsName("WhiteNoteIdle") || state.IsName("BlackNoteIdle"))
+            {
+                _canPress = true;
+            }
         }
     }
 
-    public void TryPress()
+    private void TryPress()
     {
-        if (_isPlaying) return;
+        if (!_canPress) return;
 
-        if (!IsInIdleState()) return;
-
-        Animator.SetTrigger(PressTriggerName);
+        Animator.SetTrigger("Pressed");
 
         if (AudioSource.clip != null)
         {
-            AudioSource.Play();
+            AudioSource.PlayOneShot(_clip);
         }
 
-        _isPlaying = true;
-    }
-
-    private bool IsInIdleState()
-    {
-        AnimatorStateInfo stateInfo = Animator.GetCurrentAnimatorStateInfo(0);
-        return stateInfo.IsName(IdleStateName) ||
-               stateInfo.IsName("WhiteNoteIdle") ||
-               stateInfo.IsName("BlackNoteIdle");
-    }
-
-    public void OnAnimationReturnToIdle()
-    {
-        _isPlaying = false;
+        _canPress = false;
     }
 }
