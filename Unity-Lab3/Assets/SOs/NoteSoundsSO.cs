@@ -43,12 +43,18 @@ public class NoteSoundsSO : ScriptableObject
     {
         return GetNoteData(noteName).InputKey;
     }
+
+    public GameObject GetNotePrefab(string noteName)
+    {
+        return GetNoteData(noteName).NotePrefab;
+    }
 }
 
 [System.Serializable]
 public struct NoteSoundPair
 {
-    public string NoteName;      // Должен совпадать с именем объекта на сцене
-    public AudioClip Sound;      // Звук ноты
-    public KeyCode InputKey;     // Клавиша на клавиатуре
+    public string NoteName;
+    public AudioClip Sound;
+    public KeyCode InputKey;
+    public GameObject NotePrefab;
 }

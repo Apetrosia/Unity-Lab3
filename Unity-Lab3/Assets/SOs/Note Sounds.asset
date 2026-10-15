@@ -13,42 +13,67 @@ MonoBehaviour:
   m_Name: Note Sounds
   m_EditorClassIdentifier: Assembly-CSharp::NoteSoundsSO
   NoteSounds:
+  - NoteName: A3
+    Sound: {fileID: 8300000, guid: 8c1d1f01f34962f49bee58239d57581e, type: 3}
+    InputKey: 122
+    NotePrefab: {fileID: 0}
+  - NoteName: A3Sharp
+    Sound: {fileID: 8300000, guid: fce7de6ec7c4321458908f0132d53e34, type: 3}
+    InputKey: 113
+    NotePrefab: {fileID: 0}
+  - NoteName: B3
+    Sound: {fileID: 8300000, guid: 315a2e18683457b4f9b3eac090dab7b5, type: 3}
+    InputKey: 97
+    NotePrefab: {fileID: 0}
   - NoteName: C4
     Sound: {fileID: 8300000, guid: e4499c1488595da45b138aecfec05975, type: 3}
-    InputKey: 97
+    InputKey: 115
+    NotePrefab: {fileID: 0}
   - NoteName: C4Sharp
     Sound: {fileID: 8300000, guid: c9324f55ab0c52745a2e6de5f36fda60, type: 3}
-    InputKey: 119
+    InputKey: 101
+    NotePrefab: {fileID: 0}
   - NoteName: D4
     Sound: {fileID: 8300000, guid: 02dc7bb19fd908e42bd8a7510c9e85b9, type: 3}
-    InputKey: 115
+    InputKey: 100
+    NotePrefab: {fileID: 0}
   - NoteName: D4Sharp
     Sound: {fileID: 8300000, guid: 5c3f99a60fdc772408ac3ab3e1c6ee2f, type: 3}
-    InputKey: 101
+    InputKey: 114
+    NotePrefab: {fileID: 0}
   - NoteName: E4
     Sound: {fileID: 8300000, guid: 5dd35d617d6be9543b5d1b1b1c26128f, type: 3}
-    InputKey: 100
+    InputKey: 102
+    NotePrefab: {fileID: 0}
   - NoteName: F4
     Sound: {fileID: 8300000, guid: 5136b03c6e212c349afa09d92af3b126, type: 3}
-    InputKey: 102
+    InputKey: 103
+    NotePrefab: {fileID: 0}
   - NoteName: F4Sharp
     Sound: {fileID: 8300000, guid: 5392accc80467d948b17651ed4f4042d, type: 3}
-    InputKey: 116
+    InputKey: 121
+    NotePrefab: {fileID: 0}
   - NoteName: G4
     Sound: {fileID: 8300000, guid: b12c0fe55a0bda6498e038be6a26bd6a, type: 3}
-    InputKey: 103
+    InputKey: 104
+    NotePrefab: {fileID: 0}
   - NoteName: G4Sharp
     Sound: {fileID: 8300000, guid: 7df75c39ff3e35d4a8e1b1e09f6c5ffa, type: 3}
-    InputKey: 121
+    InputKey: 117
+    NotePrefab: {fileID: 0}
   - NoteName: A4
     Sound: {fileID: 8300000, guid: d5b68877e58bc704eafa12bd0c67b2b4, type: 3}
-    InputKey: 104
+    InputKey: 106
+    NotePrefab: {fileID: 0}
   - NoteName: A4Sharp
     Sound: {fileID: 8300000, guid: 93d7e9535e08cef45a0874cea077f61a, type: 3}
-    InputKey: 117
+    InputKey: 105
+    NotePrefab: {fileID: 0}
   - NoteName: B4
     Sound: {fileID: 8300000, guid: 07702a1469ff7304d97d96f27ebd8a41, type: 3}
-    InputKey: 106
+    InputKey: 107
+    NotePrefab: {fileID: 0}
   - NoteName: C5
     Sound: {fileID: 8300000, guid: 12308ba89eef9034c89de5d431ebfa80, type: 3}
-    InputKey: 107
+    InputKey: 108
+    NotePrefab: {fileID: 0}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e949e9cca4a7e43906002eb28620d0, type: 3}
+  m_Name: Songs Catalog
+  m_EditorClassIdentifier: Assembly-CSharp::SongsCatalogSO
+  GlobalNoteSounds: {fileID: 11400000, guid: ed15c2479aa2198488c4b0ab6ec9836b, type: 2}
+  Songs:
+  - SongName: Her eyes
+    SongDataFile: {fileID: 4900000, guid: b632eaa590fe7f94fadd24a80d5ff1f5, type: 3}
+    TriggerKey: 257
