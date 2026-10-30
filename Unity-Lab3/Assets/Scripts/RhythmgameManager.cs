@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -113,8 +114,32 @@ public class RhythmGameManager : MonoBehaviour
             HitTime = spawnTime + Config.NoteTravelTime
         };
 
+        // Подписываем кружок названием ноты (D4 -> D4, A3Sharp -> A#3)
+        TMP_Text label = note.Go.GetComponentInChildren<TMP_Text>();
+        if (label != null)
+        {
+            label.text = GetDisplayName(noteName);
+        }
+        else
+        {
+            Debug.LogWarning("В префабе ноты не найден компонент TextMeshPro, подпись не установлена");
+        }
+
         _activeNotes.Add(note);
         StartCoroutine(NoteRoutine(note));
+    }
+
+    /// <summary>Превращает имя объекта клавиши в подпись: "D4" -> "D4", "A3Sharp" -> "A#3".</summary>
+    private static string GetDisplayName(string noteName)
+    {
+        const string SharpSuffix = "Sharp";
+
+        if (!noteName.EndsWith(SharpSuffix)) return noteName;
+
+        string core = noteName.Substring(0, noteName.Length - SharpSuffix.Length); // "A3"
+        if (core.Length < 2) return noteName;
+
+        return core[0] + "#" + core.Substring(1); // "A" + "#" + "3"
     }
 
     private IEnumerator NoteRoutine(ActiveNote note)

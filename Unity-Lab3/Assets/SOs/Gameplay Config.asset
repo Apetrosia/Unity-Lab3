@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b7a203bf928bd042a7b16025ec62fde, type: 3}
   m_Name: Gameplay Config
   m_EditorClassIdentifier: Assembly-CSharp::GameplayConfigSO
-  NotePrefab: {fileID: 0}
+  NotePrefab: {fileID: 6190364996256676227, guid: f1bcd02a3b5653549a17061c766f262d, type: 3}
   SpawnHeightY: 3
   NoteZ: -8
   HitLineY: 0.1
