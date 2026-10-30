@@ -1325,6 +1325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 392735080}
+  - component: {fileID: 392735081}
   m_Layer: 0
   m_Name: Piano
   m_TagString: Untagged
@@ -1363,6 +1364,20 @@ Transform:
   - {fileID: 30705738}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &392735081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392735079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8957ff023e920a44ac2d942d258e0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RhythmGameManager
+  Catalog: {fileID: 11400000, guid: d35517025a6ab5145bd091c300d98092, type: 2}
+  Config: {fileID: 11400000, guid: b982ea401b594f74498a1a7d1cd14d24, type: 2}
 --- !u!1 &404744846
 GameObject:
   m_ObjectHideFlags: 0

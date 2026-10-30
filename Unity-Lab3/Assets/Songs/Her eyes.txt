@@ -1,4 +1,16 @@
-A3Sharp 0.5
-D4 0.5
-B4 0.5
-A3 0.5
+A3Sharp,1
+D4,1
+B4,1
+A3,1
+A3Sharp,1
+D4,1
+B4,1
+A3,1
+A3Sharp,1
+D4,1
+B4,1
+A3,1
+A3Sharp,1
+D4,1
+B4,1
+A3,1

@@ -1,7 +1,11 @@
+using System;
 using UnityEngine;
 
 public class PianoKey : MonoBehaviour
 {
+    /// <summary>Вызывается, когда клавиша реально сработала (аргумент — имя ноты = имя объекта).</summary>
+    public static event Action<string> KeyPressed;
+
     [Header("Конфигурация")]
     [Tooltip("ScriptableObject с данными о нотах")]
     public NoteSoundsSO NoteSounds;
@@ -65,5 +69,7 @@ public class PianoKey : MonoBehaviour
         }
 
         _canPress = false;
+
+        KeyPressed?.Invoke(gameObject.name);
     }
 }

@@ -43,11 +43,6 @@ public class NoteSoundsSO : ScriptableObject
     {
         return GetNoteData(noteName).InputKey;
     }
-
-    public GameObject GetNotePrefab(string noteName)
-    {
-        return GetNoteData(noteName).NotePrefab;
-    }
 }
 
 [System.Serializable]
@@ -56,5 +51,4 @@ public struct NoteSoundPair
     public string NoteName;
     public AudioClip Sound;
     public KeyCode InputKey;
-    public GameObject NotePrefab;
 }
