@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PianoKey : MonoBehaviour
 {
-    /// <summary>Вызывается, когда клавиша реально сработала (аргумент — имя ноты = имя объекта).</summary>
     public static event Action<string> KeyPressed;
 
     [Header("Конфигурация")]
@@ -30,23 +29,16 @@ public class PianoKey : MonoBehaviour
         _inputKey = NoteSounds.GetInputKey(noteName);
         _clip = NoteSounds.GetSound(noteName);
 
-        if (_clip != null)
-        {
-            AudioSource.clip = _clip;
-        }
-
         Debug.Log($"Клавиша {noteName} инициализирована. Клавиша ввода: {_inputKey}");
     }
 
     void Update()
     {
-        // Проверяем нажатие клавиши
         if (Input.GetKeyDown(_inputKey))
         {
             TryPress();
         }
 
-        // АВТОМАТИЧЕСКИ разблокируем клавишу, когда она вернулась в Idle
         if (!_canPress)
         {
             AnimatorStateInfo state = Animator.GetCurrentAnimatorStateInfo(0);

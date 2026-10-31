@@ -5,27 +5,27 @@ using UnityEngine;
 public class NoteSoundsSO : ScriptableObject
 {
     [Tooltip("Ключи должны точно соответствовать названиям объектов клавиш на сцене (C4, C4Sharp, D4 и т.д.)")]
-    public List<NoteSoundPair> NoteSounds = new List<NoteSoundPair>();
+    public List<NoteInfo> NoteSounds = new List<NoteInfo>();
 
-    private Dictionary<string, NoteSoundPair> _soundDict;
+    private Dictionary<string, NoteInfo> _soundDict;
 
     public void Initialize()
     {
-        _soundDict = new Dictionary<string, NoteSoundPair>();
-        foreach (var pair in NoteSounds)
+        _soundDict = new Dictionary<string, NoteInfo>();
+        foreach (var note in NoteSounds)
         {
-            if (!_soundDict.ContainsKey(pair.NoteName))
+            if (!_soundDict.ContainsKey(note.NoteName))
             {
-                _soundDict[pair.NoteName] = pair;
+                _soundDict[note.NoteName] = note;
             }
         }
     }
 
-    public NoteSoundPair GetNoteData(string noteName)
+    public NoteInfo GetNoteData(string noteName)
     {
         if (_soundDict == null) Initialize();
 
-        if (_soundDict.TryGetValue(noteName, out NoteSoundPair data))
+        if (_soundDict.TryGetValue(noteName, out NoteInfo data))
         {
             return data;
         }
@@ -46,7 +46,7 @@ public class NoteSoundsSO : ScriptableObject
 }
 
 [System.Serializable]
-public struct NoteSoundPair
+public struct NoteInfo
 {
     public string NoteName;
     public AudioClip Sound;

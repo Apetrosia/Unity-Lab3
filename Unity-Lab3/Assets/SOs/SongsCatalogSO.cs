@@ -11,7 +11,6 @@ public class SongsCatalogSO : ScriptableObject
     [Tooltip("Список всех доступных песен в игре")]
     public List<SongInfo> Songs = new List<SongInfo>();
 
-    /// <summary>Ищет песню, привязанную к нажатой клавише.</summary>
     public bool TryGetSongByKey(KeyCode key, out SongInfo song)
     {
         foreach (var s in Songs)
@@ -28,7 +27,6 @@ public class SongsCatalogSO : ScriptableObject
     }
 }
 
-/// <summary>Одна строка файла песни: какую ноту заспавнить и сколько ждать до следующей.</summary>
 public struct SongNote
 {
     public string NoteName;
@@ -48,7 +46,6 @@ public class SongInfo
     [Tooltip("Клавиша на клавиатуре для запуска этой песни")]
     public KeyCode TriggerKey;
 
-    /// <summary>Разбирает TXT файл в список нот. Некорректные строки пропускаются с предупреждением.</summary>
     public List<SongNote> ParseNotes()
     {
         var result = new List<SongNote>();
@@ -61,22 +58,13 @@ public class SongInfo
         string[] lines = SongDataFile.text.Split('\n');
         for (int i = 0; i < lines.Length; i++)
         {
-            string line = lines[i].Trim().Trim('\uFEFF');
+            string line = lines[i].Trim().Trim();
             if (string.IsNullOrEmpty(line)) continue;
 
             string[] parts = line.Split(',');
-            if (parts.Length < 2)
-            {
-                Debug.LogWarning($"Песня '{SongName}', строка {i + 1}: ожидался формат 'Нота,Задержка', получено '{line}'");
-                continue;
-            }
 
             string noteName = parts[0].Trim();
-            if (!float.TryParse(parts[1].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out float delay))
-            {
-                Debug.LogWarning($"Песня '{SongName}', строка {i + 1}: не удалось разобрать задержку '{parts[1]}'");
-                continue;
-            }
+            float delay = float.Parse(parts[1].Trim().Replace('.', ','));
 
             result.Add(new SongNote { NoteName = noteName, Delay = Mathf.Max(0f, delay) });
         }
