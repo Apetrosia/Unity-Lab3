@@ -16,4 +16,7 @@ MonoBehaviour:
   Songs:
   - SongName: Her eyes
     SongDataFile: {fileID: 4900000, guid: b632eaa590fe7f94fadd24a80d5ff1f5, type: 3}
+    TriggerKey: 50
+  - SongName: CMajor
+    SongDataFile: {fileID: 4900000, guid: 20cebcd8e9dca504d8a62bb1a5e5a403, type: 3}
     TriggerKey: 49

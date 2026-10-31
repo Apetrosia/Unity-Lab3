@@ -60,6 +60,7 @@ public class PianoKey : MonoBehaviour
     private void TryPress()
     {
         if (!_canPress) return;
+        _canPress = false;
 
         Animator.SetTrigger("Pressed");
 
@@ -67,8 +68,6 @@ public class PianoKey : MonoBehaviour
         {
             AudioSource.PlayOneShot(_clip);
         }
-
-        _canPress = false;
 
         KeyPressed?.Invoke(gameObject.name);
     }
