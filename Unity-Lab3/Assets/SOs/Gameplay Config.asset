@@ -21,11 +21,10 @@ MonoBehaviour:
   PerfectWindow: 0.05
   GoodWindow: 0.12
   OkWindow: 0.25
-  EarlyWindow: 0.6
+  EarlyWindow: 1
   WrongMessages:
   - WRONG
-  - WRONG KEY!
+  - WRONG KEY
   - WRONG NOTE
   - NOPE
   - MISSED KEY
-  - YOU ARE LOH
