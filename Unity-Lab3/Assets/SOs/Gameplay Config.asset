@@ -19,8 +19,8 @@ MonoBehaviour:
   NoteTravelTime: 5
   NoteMaxLifetime: 6
   PerfectWindow: 0.05
-  GoodWindow: 0.12
-  OkWindow: 0.25
+  GoodWindow: 0.25
+  OkWindow: 0.355
   EarlyWindow: 1
   WrongMessages:
   - WRONG

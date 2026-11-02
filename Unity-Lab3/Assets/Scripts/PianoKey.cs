@@ -28,6 +28,7 @@ public class PianoKey : MonoBehaviour
         string noteName = gameObject.name;
         _inputKey = NoteSounds.GetInputKey(noteName);
         _clip = NoteSounds.GetSound(noteName);
+        AudioSource.clip = _clip;
 
         Debug.Log($"Клавиша {noteName} инициализирована. Клавиша ввода: {_inputKey}");
     }
